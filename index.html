@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<link rel="stylesheet" href="main.css">
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="main.js" defer></script>
+<title>Galleria</title>
+</head>
+<body>
+    
+<!-- Images -->
+    <section id="photos" class="p-10 p-lg-0 lg-10 text-center text-sm-start">
+        <div class="container p-5">
+            <h1 class="text-center p-5">GALLERIA</h1>
+            <div class="row g-4 p-4 text-center justify-content-around">
+                <div class="col-sm-12 col-md-6 col-lg-3">
+                    <img src="images/broken-and-restored-multiplication-134050.jpg" alt="broken and restored multiplication." class="img-fluid shadow-lg p-0">
+                    <!-- onclick brings in the functions load_data and clear_data comes from JS-->
+                    <button class="btn-light" onclick="load_data()">More Info</button>
+                    <button class="btn-light" onclick="clear_data()">Less Info</button>
+                    <section class="list-group art-data"></section>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-3">
+                    <img src="images/red-haird-girl-118978.jpg" alt="red haired girl" class="img-fluid shadow-lg p-0">
+                    <!-- onclick brings in the functions load_data and clear_data comes from JS-->
+                    <button class="btn-light" onclick="load_data()">More Info</button>
+                    <button class="btn-light" onclick="clear_data()">Less Info</button>
+                    <section class="list-group art-data"></section>
+                </div>
+            </div>
+            <div class="row g-4 p-4 text-center justify-content-around">
+                <div class="col-sm-12 col-md-6 col-lg-3">
+                    <img src="images/forest-and-sun-185760.jpg" alt="forest and sun"
+                        class="img-fluid shadow-lg p-0">
+                        <!-- onclick brings in the functions load_data and clear_data comes from JS-->
+                        <button class="btn-light" onclick="load_data()">More Info</button>
+                        <button class="btn-light" onclick="clear_data()">Less Info</button>
+                        <section class="list-group art-data"></section>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-3">
+                    <img src="images/bottle-rack-238749.jpg" alt="bottle rack" class="img-fluid shadow-lg p-0">
+                    <!-- onclick brings in the functions load_data and clear_data comes from JS-->
+                    <button class="btn-light" onclick="load_data()">More Info</button>
+                    <button class="btn-light" onclick="clear_data()">Less Info</button>
+                    <section class="list-group art-data"></section>
+                </div>
+            
+            </div>
+        </div>
+    </section>
+
+
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+</body>
+</html>
