@@ -1,45 +1,75 @@
+// Broken and restored
+const brokenRestored = fetch(`https://api.artic.edu/api/v1/artworks/134050`)
 
-// Get Our Artwork Data
-// async function waits to get the data from the url
-// console.log(response.data) will log the data from the database
-// axios lets us pull data from the url
-const getData = async () => {
-    let response = await axios.get(`https://api.artic.edu/api/v1/artworks`)
-    console.log(response.data)
-    return response.data
-}
+    .then((res) => {
+        console.log("RESOLVED", res);
+        return res.json();
+    })
 
-// create Constants to hold DOM Elements
-// DOM is document object model -- programming interface for web docs -- allows programming lang to interact with page
-// key : value pair
-const DOM_Elements = {
-    art_list: '.art-data',
-}
+    .then((data) => {
+        console.log(data.data['title']);
+        document.getElementById('brokenrest').innerHTML = data.data['title'];
 
-// Creation of the art title List HTML
-// takes id and name as input, then styles them with bootstrap and inserts the html into a certain place
-// document is referencing html
-// querySelector will look for ranger_list (which is ranger-list)..
-// then insertAdjacentHTML will insert the <a href..> into that place
-// insertAdjacentHTML(position, text)
-const create_list = (id, title) => {
-    const html = `<a href ="#" class="list-group-item list-group-item-action list-group-item-light" id="${id}"> ${title} </a>`;
-    document.querySelector(DOM_Elements.art_list).insertAdjacentHTML('beforeend', html)
-}
+    })
+
+    .catch((e) => {
+        console.log("ERROR", e)
+    })
 
 
-// Functions to Load Data and display HTML 
-// Waits for the button to be clicked before loading data
-// gets data from getData() function from top
-const load_data = async () => {
-    const artTitle = await getData();
-    // loops through and for each element, it will run create list from above, and pass in the element id and name
-    artTitle.forEach(element => create_list(element.id, element.title))
-}
+// Red-Haired Girl
+const redHairedGirl = fetch(`https://api.artic.edu/api/v1/artworks/118978`)
+
+    .then((res) => {
+        console.log("RESOLVED", res);
+        return res.json();
+    })
+
+    .then((data) => {
+        console.log(data.data['title']);
+        document.getElementById('redgirl').innerHTML = data.data['title'];
+
+    })
+
+    .catch((e) => {
+        console.log("ERROR", e)
+    })
 
 
-// clears the data
-// looks for ranger-list, then replaces what it is with an empty string
-const clear_data = () => {
-    document.querySelector(DOM_Elements.create_list).innerHTML = '';
-}
+// Forest
+const forestSun = fetch(`https://api.artic.edu/api/v1/artworks/185760`)
+
+    .then((res) => {
+        console.log("RESOLVED", res);
+        return res.json();
+    })
+
+    .then((data) => {
+        console.log(data.data['title']);
+        document.getElementById('forest').innerHTML = data.data['title'];
+
+    })
+
+    .catch((e) => {
+        console.log("ERROR", e)
+    })
+
+
+
+// Bottle Rack
+const bottleRack = fetch(`https://api.artic.edu/api/v1/artworks/238749`)
+
+    .then((res) => {
+        console.log("RESOLVED", res);
+        return res.json();
+    })
+
+    .then((data) => {
+        console.log(data.data['title']);
+        document.getElementById('bottle').innerHTML = data.data['title'];
+
+    })
+
+    .catch((e) => {
+        console.log("ERROR", e)
+    })
